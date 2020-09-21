@@ -1,6 +1,6 @@
 <template>
     <div>
-
+           <FromLogin/>
     </div>    
 </template>
 
@@ -9,7 +9,7 @@ import FromLogin from '@/components/FromLogin.vue'
 
 export default {
     components: {
-        FromLogin,
+        FromLogin: FromLogin,
     }
 }
 </script>
