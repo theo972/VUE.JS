@@ -6,6 +6,8 @@
             <input type='email' /> <br/>
             password : <br/>
             <input type='password'/> <br/>
+
+            <button type="submit">login now</button>
         </form>
     </div>       
 </template>
