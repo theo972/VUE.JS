@@ -20,10 +20,14 @@ const routes = [
   },
   {
     path: '/login',
-    name: ' login',
+    name: 'login',
     component: () => import(/* webpackChunkName: "login" */ '../views/Login.vue')
+  },
+  {
+    path: '/ToDolist',
+    name: 'Todo',
+    component: () => import(/* webpackChunkName: "login" */ '../views/ToDoList.vue')
   }
- 
 ]
 
 const router = new VueRouter({
