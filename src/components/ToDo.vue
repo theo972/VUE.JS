@@ -1,46 +1,37 @@
 <template>
     <div>
-        <form @submit.prevent="deletetodo">
-            <select todoli ="todolist" size="1">
-            <option>theo</option>
-            <option>antho</option>
-            <option>Jimmy</option>
-            </select>
-            <br/>
-            <button type="submit">retire de la todolist</button>
-        </form>  
-        <form @submit.prevent="handleSubmits">
-         <br/>
-            Rajouter une tache : 
-            <input type='text' v-model="text" /> <br/> 
-             <button type="submit">Rajouter</button>
+        <form @submit.prevent="SubmitText">
+            <input type='text' v-model="text" /> <br/>
+            <button type ="submit">Valider</button>
         </form>
-    <div>
-        <p>
-            todolist: {{ todoli }} <br/>
-            text: {{ text }} 
-        </p>    
+        <div>
+            <div v-for="(item, index) in tableau" :key="index">   
+                <input type ="checkbox">
+                {{ item }}
+
+            </div>
+        </div>
     </div>
-    </div>
+    
+
 </template>
 
 <script>
 export default {
-    data() {
+    data(){
         return{
-            todoli: 'prout', 
-            text: '',
+            tableau: ['theo','erot','toertt'],
+            text: "",
         }
     },
 
-    methods: {
-        deletetodo (){
-            
-        },
-        handleSubmits (){
-            alert('vous avez rajouter' + text )
-        }
-    }
-}
+     methods:{
+         SubmitText () {
+            this.tableau.push(this.text);
 
+
+         }
+     } 
+
+}
 </script>
