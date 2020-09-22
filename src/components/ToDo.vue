@@ -6,11 +6,15 @@
         </form>
         <div>
             <div v-for="(item, index) in tableau" :key="index">   
-                <input type ="checkbox">
+                <input type ="checkbox" />
                 {{ item }}
-
+  
+        {{ item.name }}
+                <button @click.stop.prevent="DeleteText(index)">X</button>
             </div>
+    
         </div>
+  
     </div>
     
 
@@ -22,6 +26,7 @@ export default {
         return{
             tableau: ['theo','erot','toertt'],
             text: "",
+            checkbox: "",
         }
     },
 
@@ -31,7 +36,10 @@ export default {
 
 
          }
-     } 
+     }, 
+        DeleteText (index) {
+            this.tableau.splice(index, 1);
+        }
 
 }
 </script>
