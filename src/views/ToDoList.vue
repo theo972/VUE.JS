@@ -5,11 +5,11 @@
 </template>
 
 <script>
-import ToDo from '@/components/ToDo.vue'
+import ToDodetails from '@/components/ToDo.vue'
 
 export default {
     components: {
-        ToDo: ToDo,
+        ToDodetails: ToDodetails,
     }
 }
 </script>
